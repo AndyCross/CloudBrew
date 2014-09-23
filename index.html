@@ -16,8 +16,9 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
-    <script src="assets/js/angular/cloudbrewed.js"></script>
     <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular/cloudbrewed.js"></script>
+    <script src="assets/js/angular/speakers.js"></script>
 
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -30,7 +31,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body>
+<body ng-app="cloudbrewed">
 
 <!-- Navbar -->
 <div class="navbar navbar-fixed-top" ng-hide="true">
@@ -257,14 +258,14 @@
 
 
 <!-- #speakers -->
-<div class="container-fluid" id="speakers">
+<div class="container-fluid" id="speakers" ng-controller="speakersCtrl">
     <div class="container dark">
-        <h1>Speakers</h1>
+        <h1>Speakers</h1>{{drunkenness}}
 
         <ul class="thumbnails">
             <li class="span4">
                 <div class="thumbnail">
-                    <img alt="" src="assets/img/speakers/patriek-vandorp.png">
+                    <img alt="" src="assets/img/speakers/patriek-vandorp.png" drunkimg="drunkenness + 270">
 
                     <h3>Patriek van Dorp</h3>
 
@@ -281,7 +282,7 @@
 
             <li class="span4">
                 <div class="thumbnail">
-                    <img alt="" src="assets/img/speakers/andy-cross.png">
+                    <img alt="" src="assets/img/speakers/andy-cross.png" drunkimg="drunkenness">
 
                     <h3>Andy Cross</h3>
 
@@ -298,7 +299,7 @@
 
             <li class="span4">
                 <div class="thumbnail">
-                    <img alt="" src="assets/img/speakers/yves-goeleven.png">
+                    <img alt="" src="assets/img/speakers/yves-goeleven.png" drunkimg="drunkenness + 90">
 
                     <h3>Yves Goeleven</h3>
 
@@ -317,7 +318,7 @@
         <ul class="thumbnails">
             <li class="span4">
                 <div class="thumbnail">
-                    <img alt="" src="assets/img/speakers/simon-elliston-ball.png">
+                    <img alt="" src="assets/img/speakers/simon-elliston-ball.png" drunkimg="drunkenness +180">
 
                     <h3>Simon Elliston Ball</h3>
 
@@ -334,7 +335,7 @@
 
             <li class="span4">
                 <div class="thumbnail">
-                    <img alt="" src="assets/img/speakers/radu-vunvulea.png">
+                    <img alt="" src="assets/img/speakers/radu-vunvulea.png" drunkimg="drunkenness*0.2">
 
                     <h3>Radu Vunvulea</h3>
 
@@ -351,7 +352,7 @@
 
             <li class="span4">
                 <div class="thumbnail">
-                    <img alt="" src="assets/img/speakers/nuno-godinho.png">
+                    <img alt="" src="assets/img/speakers/nuno-godinho.png" drunkimg="drunkenness*2">
 
                     <h3>Nuno Godinho</h3>
 
@@ -370,7 +371,7 @@
         <ul class="thumbnails">
             <li class="span4">
                 <div class="thumbnail">
-                    <img alt="" src="assets/img/speakers/alex-mang.png">
+                    <img alt="" src="assets/img/speakers/alex-mang.png" drunkimg="drunkenness">
 
                     <h3>Alex Mang</h3>
 
@@ -387,7 +388,7 @@
 
             <li class="span4">
                 <div class="thumbnail">
-                    <img alt="" src="assets/img/speakers/magnus-martensson.png">
+                    <img alt="" src="assets/img/speakers/magnus-martensson.png" drunkimg="drunkenness">
 
                     <h3>Magnus M&#229;rtensson</h3>
 
@@ -404,7 +405,7 @@
 
             <li class="span4">
                 <div class="thumbnail">
-                    <img alt="" src="assets/img/speakers/scott-klein.png">
+                    <img alt="" src="assets/img/speakers/scott-klein.png" drunkimg="drunkenness + 45">
 
                     <h3>Scott Klein</h3>
 
