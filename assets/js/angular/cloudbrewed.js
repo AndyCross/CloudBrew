@@ -7,8 +7,50 @@ cloudbrewed.directive('drunkimg', function() {
         	element.css("position", "relative");
         	scope.$watch(attrs.drunkimg, function(value) {
 		        element.css("-webkit-transform", "rotate(" + value + "deg)");
-		        element.css("left", value + "px");
+		        element.css("transform", "rotate(" + value + "deg)");
 		      });
         }
     };
+});
+
+cloudbrewed.directive('drunktextweight', function(){
+	return {
+		restrinct: 'A',
+		link: function(scope, element, attrs) {
+        	scope.$watch(attrs.drunktextweight, function(value) {
+        		if (value % 2 == 0) {
+        			element.css('font-weight', 'bold');
+        		}
+        		else {
+        			element.css('font-weight', 'normal');
+        		}
+        	});
+		}
+	};
+});
+
+cloudbrewed.directive('drunktextbeer', function(){
+	return {
+		restrinct: 'A',
+		link: function(scope, element, attrs) {
+			scope.originalText = element.text();
+
+        	scope.$watch(attrs.drunktextbeer, function(value) {
+        		if (value % 4 == 0) {
+        			var replacement = element.text().split(' ').map(function(v){
+        				if (v.length % 2 == 0)
+        				{
+        					return 'BEER';
+        				}
+        				return v;
+        			}).join(' ');
+
+        			element.text(replacement);
+        		}
+        		else {
+        			element.text(scope.originalText);
+        		}
+        	});
+		}
+	};
 });

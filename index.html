@@ -18,7 +18,7 @@
 
     <script src="assets/js/angular.min.js"></script>
     <script src="assets/js/angular/cloudbrewed.js"></script>
-    <script src="assets/js/angular/speakers.js"></script>
+    <script src="assets/js/angular/controllers.js"></script>
 
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -31,7 +31,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body ng-app="cloudbrewed">
+<body ng-app="cloudbrewed" drunkimg="drunkenness / 10" ng-controller="linearDrunkCtrl">
 
 <!-- Navbar -->
 <div class="navbar navbar-fixed-top" ng-hide="true">
@@ -69,13 +69,13 @@
 
 <!-- #intro -->
 <div class="main-container">
-<div class="container-fluid" id="intro">
+<div class="container-fluid" id="intro" ng-controller="circularDrunkCtrl">
     <div class="row span6 center">
-        <h1>A conference by <a href="http://www.azug.be">AZUG</a>, the Belgium Microsoft Azure User Group</h1>
+        <h1 drunktextweight="drunkenness" drunktextbeer="drunkenness">A conference by <a href="http://www.azug.be">AZUG</a>, the Belgium Microsoft Azure User Group</h1>
 
-        <h2>Saturday November 29, 2014</h2>
+        <h2 drunktextweight="drunkenness + 1">Saturday November 29, 2014</h2>
 
-        <a href="#register" class="btn btn-xlarge btn-purple">Register now!</a>
+        <a href="#register" class="btn btn-xlarge btn-purple" drunkimg="drunkenness">Register now!</a>
 
         <p style="color: black;"><a href="CloudBrew2014.ics" style="color: white;">Here's an ICS file if you want to add it to your calendar.</a></p>
     </div>
@@ -83,9 +83,9 @@
 <!-- ends Intro -->
 
 <!-- #about -->
-<div class="container-fluid" id="about">
+<div class="container-fluid" id="about" ng-controller="circularDrunkCtrl">
     <div class="container light">
-        <h1>About CloudBrew</h1>
+        <h1 drunktextbeer="drunkenness">About CloudBrew</h1>
         <ul class="thumbnails">
             <li class="span3">
                 <div class="thumbnail">
@@ -258,9 +258,9 @@
 
 
 <!-- #speakers -->
-<div class="container-fluid" id="speakers" ng-controller="speakersCtrl">
+<div class="container-fluid" id="speakers" ng-controller="circularDrunkCtrl">
     <div class="container dark">
-        <h1>Speakers</h1>{{drunkenness}}
+        <h1>Speakers</h1>
 
         <ul class="thumbnails">
             <li class="span4">
