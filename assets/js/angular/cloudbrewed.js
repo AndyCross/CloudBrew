@@ -54,3 +54,36 @@ cloudbrewed.directive('drunktextbeer', function(){
 		}
 	};
 });
+
+cloudbrewed.directive('drunksepia', function(){
+	return {
+		restrinct: 'A',
+		link: function(scope, element, attrs) {
+        	scope.$watch(attrs.drunksepia, function(value) {
+        		element.css('-webkit-filter', 'sepia(' + value + ')');
+        	});
+		}
+	};
+});
+
+cloudbrewed.directive('drunkhue', function(){
+	return {
+		restrinct: 'A',
+		link: function(scope, element, attrs) {
+        	scope.$watch(attrs.drunkhue, function(value) {
+        		element.css('-webkit-filter', 'hue-rotate(' + value + 'deg)');
+        	});
+		}
+	};
+});
+
+cloudbrewed.directive('drunkblur', function(){
+	return {
+		restrinct: 'A',
+		link: function(scope, element, attrs) {
+        	scope.$watch(attrs.drunkblur, function(value) {
+        		element.css('-webkit-filter', 'blur(' + value + 'px)');
+        	});
+		}
+	};
+});
