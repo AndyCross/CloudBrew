@@ -31,7 +31,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body ng-app="cloudbrewed" drunkimg="drunkenness / 10" ng-controller="linearDrunkCtrl">
+<body ng-app="cloudbrewed" drunkimg="drunkenness / 10" ng-controller="linearDrunkCtrl" style="padding-top: 60px;">
 
 <!-- Navbar -->
 <div class="navbar navbar-fixed-top" drunksepia="drunkenness / 10">
@@ -163,11 +163,11 @@
 
         <div class="row-fluid">
             <div class="span2 session-slot">09:15 - 10:15</div>
-            <div class="span5"><span class="visible-phone">Room 1:</span>
+            <div class="span5" ng-controller="linearDrunkCtrl" drunktextbeer="drunkenness"><span class="visible-phone">Room 1:</span>
                 <a class="session-abstract" data-toggle="popover" data-placement="bottom" data-content="Safecast is a globally spanning project of volunteers who gather and analyze data on nuclear contamination, primarily in and around Japan. While Safecast manufactures and deploys own mobile Geiger counters, an Azure HDInsight cluster analyzes and renders the collected data. The rendering algorithm is highly recursive and takes a long time to complete. In this session, we will show how Safecast uses HDInsight to distribute the generation of their map. We will discuss the architecture and how we migrated Safecast from Hadoop to HDInsight. Get to know our learnings and our do's and don'ts."><strong>How Safecast uses Microsoft Azure and HDInsight to Render Nuclear Contamination Maps of Japan</strong></a><br/>
                 Dr. Robert Neumann
             </div>
-            <div class="span5"><span class="visible-phone">Room 2:</span>
+            <div class="span5" ng-controller="linearDrunkCtrl" drunktextbeer="drunkenness"><span class="visible-phone">Room 2:</span>
                 <a class="session-abstract" data-toggle="popover" data-placement="bottom" data-content="So you've learned what elasticity means and why it is important to consider scalability in your cloud application architecture. But how can you easily manage your code in order to implement all the theories around scalability? During this session, I will talk and demo the most common patterns used when designing a cloud application: the queue based load leveling, the competing consumers pattern, the priority queue pattern, the throttling pattern, the materialized view pattern, the event sourcing pattern and the CQRS pattern."><strong>Patterns for Scalability in Microsoft Azure Applications</strong></a><br/>
                 Alex Mang
             </div>
